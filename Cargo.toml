@@ -1,0 +1,16 @@
+[package]
+name = "axum_assessment_web_server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.6.20"
+eyre = "0.6.8"
+fs = "0.0.5"
+reqwest = "0.11.18"
+tokio = { version = "1.31.0", features = ["macros", "rt-multi-thread"] }
+tower-http = { version = "0.4.3", features = ["trace", "fs"] }
+tracing = "0.1.37"
+tracing-subscriber = "0.3.17"
