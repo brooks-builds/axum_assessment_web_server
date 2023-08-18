@@ -8,6 +8,7 @@ This assessment is checking the following skills
 
 - Serve static files
 - Render HTML
+- Render HTML with dynamic data
 
 ## Instructions
 
@@ -29,8 +30,8 @@ A solution for this is on the Solution branch. You can check this out locally or
 
 To pass this assessment the following needs to be done
 
-- task
-- task
-- task
+- Serve static files in the `public` directory in the `/public/` route
+- Render HTML with a name query param
+- Respond with index.html when the route doesn't match (would have been a 404)
 - check.sh script is passing
 

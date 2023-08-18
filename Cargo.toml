@@ -9,6 +9,7 @@ edition = "2021"
 axum = "0.6.20"
 eyre = "0.6.8"
 fs = "0.0.5"
+rand = "0.8.5"
 reqwest = "0.11.18"
 serde = { version = "1.0.183", features = ["derive"] }
 tera = "1.19.0"

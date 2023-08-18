@@ -114,6 +114,7 @@ dependencies = [
  "axum",
  "eyre",
  "fs",
+ "rand",
  "reqwest",
  "serde",
  "tera",
