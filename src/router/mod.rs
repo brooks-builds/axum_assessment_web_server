@@ -11,6 +11,7 @@ pub fn create_router(state: AppState) -> Router {
 
     Router::new()
         .route("/", get(home))
+        .fallback(home)
         .nest_service("/public/", serve_dir)
         .layer(tower_http::trace::TraceLayer::new_for_http())
         .with_state(state)

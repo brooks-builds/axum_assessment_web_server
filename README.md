@@ -9,6 +9,7 @@ This assessment is checking the following skills
 - Serve static files
 - Render HTML
 - Render HTML with dynamic data
+- Serve the index.html file even if it's a 404
 
 ## Instructions
 
