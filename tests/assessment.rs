@@ -16,12 +16,15 @@ async fn should_get_a_static_file() -> Result<()> {
 
 #[tokio::test]
 async fn should_get_rendered_index() -> Result<()> {
-    let url = format!("{BASE_URL}/");
+    let url = format!("{BASE_URL}/?name=Xilbe");
     let response = reqwest::get(url).await?;
     assert_eq!(response.status(), 200);
     let html = response.text().await?;
     let first_line = html.lines().next().expect("should have first line");
     assert_eq!(first_line, "<html>");
+    let html_has_name = html.contains("Hello Xilbe");
+    assert!(html_has_name);
+
     Ok(())
 }
 

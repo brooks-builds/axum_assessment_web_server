@@ -10,6 +10,7 @@ axum = "0.6.20"
 eyre = "0.6.8"
 fs = "0.0.5"
 reqwest = "0.11.18"
+serde = { version = "1.0.183", features = ["derive"] }
 tera = "1.19.0"
 tokio = { version = "1.31.0", features = ["macros", "rt-multi-thread"] }
 tower-http = { version = "0.4.3", features = ["trace", "fs"] }
