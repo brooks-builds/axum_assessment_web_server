@@ -2,17 +2,14 @@ mod home;
 
 use axum::{routing::get, Router};
 use home::home;
-use tower_http::services::ServeDir;
 
-use crate::app_state::AppState;
-
-pub fn create_router(state: AppState) -> Router {
-    let serve_dir = ServeDir::new("public");
-
+/// Update the router so that it serves all files in the public directory to the route /public.
+///
+/// For example, sending a GET request to /public/sample.json should result in the file sample.json being sent back to the client
+///
+/// Also update the router so that a 404 would instead return a 200 code and run the home route
+pub fn create_router() -> Router {
     Router::new()
         .route("/", get(home))
-        .fallback(home)
-        .nest_service("/public/", serve_dir)
         .layer(tower_http::trace::TraceLayer::new_for_http())
-        .with_state(state)
 }

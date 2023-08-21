@@ -35,4 +35,8 @@ To pass this assessment the following needs to be done
 - Render HTML with a name query param
 - Respond with index.html when the route doesn't match (would have been a 404)
 - check.sh script is passing
+- Templating engine is not initialized in the route handler, but passed in via an extension or state
 
+## Notes
+
+- The home.html file has already been created. The solution branch uses [Tera](https://crates.io/crates/tera) and the html file takes in a variable using `{{}}` syntax which is compatible with multiple templating engines. Feel free to use any templating engine you want.
